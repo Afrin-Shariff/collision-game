@@ -82,8 +82,6 @@ def drawGood():
                 if obstacle_positions[i] <= 0 or obstacle_positions[i] >= 800:
                     obstacle_directions[i] *= -1
                    
-                screen.blit(stars, (25 + i * 100, obstacle_positions[i]))  # Adjust X position based on the index
-        pass
 def drawCharacter():
     x,y = getPos()
    
@@ -132,14 +130,13 @@ pygame.init()
 
 screen = pygame.display.set_mode([800, 800])
 
-heart = pygame.image.load("heart.png").convert_alpha()
+heart = pygame.image.load("heart.webp").convert_alpha()
 heart = pygame.transform.scale(heart,(70,40))
 running = True
 frameCount = 1
 level = 0
 health = 500
-planet = pygame.image.load("planet4.png").convert_alpha()
-stars = pygame.image.load("stars.png").convert_alpha()
+planet = pygame.image.load("planet4.webp").convert_alpha()
 pygame.mixer.init()
 sound = pygame.mixer.Sound("spirals.wav")
 sound.play()
